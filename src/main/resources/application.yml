@@ -1,0 +1,35 @@
+---
+micronaut:
+  application:
+    name: unified-lineups-rdbms
+
+jackson:
+  bean-introspection-module: true
+---
+datasources:
+  default:
+    url: jdbc:postgresql://127.0.0.1:5432/sloth
+    driverClassName: org.postgresql.Driver
+    username: sloth
+    password: sloth
+    schema-generate: CREATE-DROP
+    dialect: org.hibernate.dialect.PostgreSQL10Dialect
+
+jpa:
+  default:
+    properties:
+      hibernate:
+        bytecode:
+          provider: none
+        hbm2ddl:
+          auto: update
+
+
+jasync:
+  client:
+    port: 5432
+    host: localhost
+    database: sloth
+    username: sloth
+    password: sloth
+    maxActiveConnections: 29

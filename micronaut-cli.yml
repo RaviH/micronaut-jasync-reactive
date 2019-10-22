@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: unified.lineups.rdbms
+---
+testFramework: spock
+sourceLanguage: java
